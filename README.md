@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+# 🏡 Real Estate Portfolio & Deal Viability Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, modern **React + TypeScript** dashboard built to help property analysts and investors visualise deal data in one clean view.
 
-Currently, two official plugins are available:
+This project was designed by **Josue Nganmoue** to demonstrate how property metrics — like total units, deal count, and portfolio value — can be tracked and filtered using a responsive web app.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌟 What This Dashboard Does
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This app acts as a mini “real estate command center.”  
+You can quickly:
 
-## Expanding the ESLint configuration
+- 🏗 Filter projects by **status**, **property type**, or **location**  
+- 💰 View totals for **deals**, **units**, and **portfolio value**  
+- 📊 Switch between different dashboard sections (Overview, Pipeline, Data Management)  
+- ⚡ Run it locally or deploy online using GitHub Pages or Vercel  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧩 How It’s Built
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Area | Description |
+|------|--------------|
+| **Framework** | React + TypeScript + Vite |
+| **Styling** | Tailwind CSS |
+| **Charts & Layout** | Custom components with lightweight logic |
+| **Purpose** | To visualise and test deal-tracking workflows used in UK real-estate analysis |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🖥 Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+public/
+└── index.html # Entry HTML file
+src/
+├── App.jsx # Main dashboard logic
+├── index.css # Styles
+├── main.jsx # React entry point
+├── components/ # (optional future folder for cards & filters)
+vite.config.ts # Vite configuration
+tailwind.config.js # Tailwind setup
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+yaml
+Copy code
+
+---
+
+## 🚀 How To Run It
+
+1️⃣ **Clone this repository**
+```bash
+git clone https://github.com/Jashine97/real-estate-dashboard.git
+cd real-estate-dashboard
+2️⃣ Install dependencies
+
+bash
+Copy code
+npm install
+3️⃣ Run locally
+
+bash
+Copy code
+npm run dev
+Then open the link shown in the terminal usually:
+👉 http://localhost:5173
+
+🎯 Why I Built It
+I created this as a property analytics demo to show how real-estate data can be made visual and interactive.
+It’s part of my Business Analyst Portfolio, where I explore practical ways to present viability metrics and decision-support data through code.
